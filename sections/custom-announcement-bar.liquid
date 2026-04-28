@@ -1,0 +1,33 @@
+{%- style -%}
+.custom-announcement-bar{
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+{%- endstyle -%}
+
+<div class="custom-announcement-bar">
+  <p>{{ section.settings.announcement_text }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Announcement",
+  "settings": [
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement text",
+      "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Announcement"
+    }
+  ]
+}
+{% endschema %}
